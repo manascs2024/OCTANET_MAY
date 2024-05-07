@@ -10,7 +10,7 @@ body {
 nav {
     display: flex;
     overflow: hidden;
-    background-color: #000; 
+    background-color: #2a2a2a; 
     justify-content: space-between;
     font-family: var(--nav),var(--sans);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -174,7 +174,7 @@ main {
 
 
 .site-footer {
-  background-color: #000;
+  background-color: #2a2a2a;
   color: #fff;
   padding: 40px;
   display: flex;
@@ -185,7 +185,7 @@ main {
 }
 
 .footer-logo {
-  flex: 0 0 200px; /* Width of the logo section */
+  flex: 0 0 200px; 
 }
 
 .footer-logo img {
@@ -195,8 +195,8 @@ main {
 .footer-links,
 .footer-contact,
 .footer-social {
-  flex: 1 1 200px; /* Equal width for each section */
-  margin-right: 20px; /* Adjust spacing between sections */
+  flex: 1 1 200px; 
+  margin-right: 20px; 
   margin-top: -2%;
 }
 
