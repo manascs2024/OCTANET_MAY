@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div id="taskEntry">
+            <input type="text" id="taskInput" placeholder="Enter task...">
+            <input type="text" id="categoryInput" placeholder="Category...">
+            <br>
+            <div class="button-container">
+                <div class="top-buttons">
+                    <button type="button" class="add-task">
+                        <span class="button__text">Add Item</span>
+                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                    </button>
+                    <button class="sort">Sort</button>
+                </div>
+                <button class="clear" id="clearTasksBtn">
+                    <svg viewBox="0 0 448 512" class="svgIcon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+                </button>
+            </div>                      
+            <div id="error-message" style="color: red; display: none;">Please enter a task.</div> <!-- Error message -->
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

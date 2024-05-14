@@ -1,0 +1,262 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(Images/background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#taskEntry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.top-buttons button {
+  margin: 0 5px; /* Adjust as needed */
+}
+
+
+button {
+  margin-right: 10px;
+}
+
+button.add-task {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  background-color: #111111;
+}
+
+button.add-task, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+button.add-task .button__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+button.add-task .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.add-task .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+button.add-task:hover {
+  background: #000000;
+}
+
+button.add-task:hover .button__text {
+  color: transparent;
+}
+
+button.add-task:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+button.add-task:active .button__icon {
+  background-color: #1a1a1a;
+}
+
+button.add-task:active {
+  border: 1px solid #1a1a1a;
+}
+
+button.sort {
+  padding: 10px 20px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button.sort::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+}
+
+button.sort:hover {
+  color: #e8e8e8;
+}
+
+button.sort:hover::before {
+  width: 100%;
+}
+
+button.clear {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.clear:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.clear:hover .svgIcon {
+  width: 50px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.clear::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.clear:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(30px);
+  transition-duration: .3s;
+}
+
+.error-border {
+  border: 2px solid red;
+}
+
+.task-container {
+  display: flex;
+  align-items: center;
+}
+
+.task-container button {
+  margin-left: 5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 4em;
+  background-color: rgba(0, 0, 0, 0.253);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+input[type="text"] {
+  width: 150%; /* Adjust the width as needed */
+  padding: 10px;
+  margin-bottom: 10px;
+}
