@@ -43,11 +43,11 @@ input[type="text"] {
 .top-buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px; /* Adjust as needed */
+  margin-bottom: 10px;
 }
 
 .top-buttons button {
-  margin: 0 5px; /* Adjust as needed */
+  margin: 0 5px;
 }
 
 
@@ -256,7 +256,7 @@ button.clear {
 }
 
 input[type="text"] {
-  width: 150%; /* Adjust the width as needed */
+  width: 150%; 
   padding: 10px;
   margin-bottom: 10px;
 }
